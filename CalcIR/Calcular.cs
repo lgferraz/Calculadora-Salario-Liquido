@@ -57,7 +57,8 @@ namespace CalcIR
         private void irrf()
         {
             double vIrrf = 0;
-            double salarioL = double.Parse(this.SalarioLiquido) - ((189.59 * int.Parse(this.IRRF[2])) - double.Parse(this.Outros[2]));
+            //- (189.59 * int.Parse(this.IRRF[2]) 
+            double salarioL = double.Parse(this.SalarioLiquido) - double.Parse(this.Outros[2]);
             string aliquota = "00";
 
             if (salarioL < 1903.98)
