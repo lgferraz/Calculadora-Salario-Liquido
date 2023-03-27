@@ -20,7 +20,7 @@ namespace CalcIR
             this.INSS = new string[] {"00", "00", "00" };
             this.IRRF = new string[] { "00", "00", dependentes };
             this.Totais = new string[] { "00", "00", "00" };
-            this.main();
+            this.Main();
         }
         private void inss()
         {
@@ -59,37 +59,39 @@ namespace CalcIR
             double vIrrf = 0;
             //- (189.59 * int.Parse(this.IRRF[2]) 
             double salarioL = double.Parse(this.SalarioLiquido) - double.Parse(this.Outros[2]);
-            string aliquota = "00";
-
+            double vDependentes = ((189.59 * int.Parse(this.IRRF[2])));
             if (salarioL < 1903.98)
             {
-                //
+                vIrrf = 0;
+                vDependentes = 0;
             }
-            else if (salarioL > 1903.98 && salarioL < 2826.65)
+            else if (salarioL >= 1903.98 && salarioL < 2826.65)
             {
-                aliquota = "7.5%";
                 vIrrf = (salarioL * 7.5 / 100) - 142.8;
+                vDependentes = (vDependentes * (7.5 / 100));
             }
-            else if (salarioL > 2826.65 && salarioL < 3751.05)
+            else if (salarioL >= 2826.65 && salarioL < 3751.05)
             {
-                aliquota = "15%";
                 vIrrf = (salarioL * 15 / 100) - 354.8;
+                vDependentes = (vDependentes * (15 / 100));
             }
-            else if (salarioL > 3751.05 && salarioL < 4664.68)
+            else if (salarioL >= 3751.05 && salarioL < 4664.68)
             {
-                aliquota = "22.5%";
-                vIrrf = (salarioL * 22.5 / 100) - 636.13;
+                vIrrf = (salarioL * (22.5 / 100)) - 636.13;
+                vDependentes = (vDependentes * (22.5 / 100));
             }
-            else if (salarioL > 4664.68)
+            else if (salarioL >= 4664.68)
             {
-                aliquota = "27.5%";
                 vIrrf = (salarioL * 27.5 / 100) - 869.36;
+                vDependentes = (vDependentes * (27.5 / 100));
             }
+            
+            vIrrf = vIrrf-vDependentes;
             this.IRRF[0] = (vIrrf / salarioL*100).ToString("F")+"%";
             this.IRRF[2] = vIrrf.ToString("F");
             this.SalarioLiquido = (salarioL - vIrrf).ToString("C", CultureInfo.CreateSpecificCulture("pt-BR"));
         }
-        public void main()
+        public void Main()
         {
             this.inss();
             this.irrf();
