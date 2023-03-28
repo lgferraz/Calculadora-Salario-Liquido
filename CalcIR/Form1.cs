@@ -29,7 +29,8 @@ namespace CalcIR
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Conexao.Conectar();
+            MessageBox.Show("conectado");
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -55,7 +56,7 @@ namespace CalcIR
                 for(int j = 0; j < tabela[i].Length; j++)
                 {
                     tabela[i][j].Text = dados[i][j];
-                }
+                }       
             }
             lbSalarioLiquido.Text = calculo.SalarioLiquido;
 
