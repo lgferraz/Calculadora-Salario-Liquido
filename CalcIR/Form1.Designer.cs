@@ -65,6 +65,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nmrDependentes)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -84,7 +87,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(61, 66);
+            this.label2.Location = new System.Drawing.Point(61, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 20);
             this.label2.TabIndex = 1;
@@ -93,7 +96,7 @@
             // txtSalarioB
             // 
             this.txtSalarioB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalarioB.Location = new System.Drawing.Point(66, 89);
+            this.txtSalarioB.Location = new System.Drawing.Point(66, 142);
             this.txtSalarioB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSalarioB.Name = "txtSalarioB";
             this.txtSalarioB.Size = new System.Drawing.Size(150, 35);
@@ -104,7 +107,7 @@
             // txtDescontos
             // 
             this.txtDescontos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescontos.Location = new System.Drawing.Point(221, 89);
+            this.txtDescontos.Location = new System.Drawing.Point(221, 142);
             this.txtDescontos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescontos.Name = "txtDescontos";
             this.txtDescontos.Size = new System.Drawing.Size(150, 35);
@@ -115,7 +118,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(219, 66);
+            this.label3.Location = new System.Drawing.Point(219, 119);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 3;
@@ -125,7 +128,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(372, 66);
+            this.label4.Location = new System.Drawing.Point(372, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 20);
             this.label4.TabIndex = 5;
@@ -134,7 +137,7 @@
             // nmrDependentes
             // 
             this.nmrDependentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nmrDependentes.Location = new System.Drawing.Point(377, 89);
+            this.nmrDependentes.Location = new System.Drawing.Point(377, 142);
             this.nmrDependentes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nmrDependentes.Name = "nmrDependentes";
             this.nmrDependentes.Size = new System.Drawing.Size(149, 35);
@@ -169,7 +172,7 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(66, 164);
+            this.panel1.Location = new System.Drawing.Point(66, 217);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(462, 260);
@@ -440,7 +443,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(69, 155);
+            this.label5.Location = new System.Drawing.Point(69, 208);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 16);
             this.label5.TabIndex = 9;
@@ -449,7 +452,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(228, 444);
+            this.button1.Location = new System.Drawing.Point(170, 502);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 39);
@@ -458,11 +461,45 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(299, 502);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(123, 39);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Inserir";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // txtNome
+            // 
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.txtNome.Location = new System.Drawing.Point(145, 74);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(381, 32);
+            this.txtNome.TabIndex = 13;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.label10.Location = new System.Drawing.Point(62, 77);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(77, 26);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Nome:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 508);
+            this.ClientSize = new System.Drawing.Size(601, 557);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
@@ -524,6 +561,9 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbSalarioLiquido;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label label10;
     }
 }
 

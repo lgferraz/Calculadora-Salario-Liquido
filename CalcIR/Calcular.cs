@@ -49,7 +49,7 @@ namespace CalcIR
 
             double salarioL = slBruto - vlInss;
             double porcDesc = vlInss / slBruto * 100;
-            this.SalarioLiquido = salarioL.ToString("F");
+            this.SalarioLiquido = salarioL.ToString();
             this.INSS[0] = porcDesc.ToString("F") +"%";
             this.INSS[2] = vlInss.ToString("F");
         }
@@ -89,7 +89,7 @@ namespace CalcIR
             vIrrf = vIrrf-vDependentes;
             this.IRRF[0] = (vIrrf / salarioL*100).ToString("F")+"%";
             this.IRRF[2] = vIrrf.ToString("F");
-            this.SalarioLiquido = (salarioL - vIrrf).ToString("C", CultureInfo.CreateSpecificCulture("pt-BR"));
+            this.SalarioLiquido = (salarioL - vIrrf).ToString("F");
         }
         public void Main()
         {

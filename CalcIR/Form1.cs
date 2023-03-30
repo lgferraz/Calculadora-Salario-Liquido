@@ -29,8 +29,7 @@ namespace CalcIR
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Conexao.Conectar();
-            MessageBox.Show("conectado");
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -60,6 +59,16 @@ namespace CalcIR
             }
             lbSalarioLiquido.Text = calculo.SalarioLiquido;
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Conexao.Conectar();
+            string salarioBruto = txtSalarioB.Text;
+            string descontos = txtDescontos.Text;
+            string dependentes = nmrDependentes.Text;
+            Calcular calculo = new Calcular(salarioBruto, descontos, dependentes);
+            Salarios.Inserir(txtNome.Text, salarioBruto, descontos, dependentes, calculo.INSS[2], calculo.IRRF[2], calculo.SalarioLiquido);
         }
     }
 }
