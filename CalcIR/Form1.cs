@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,9 @@ namespace CalcIR
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Conexao.Conectar();
+            string sql = "SELECT * FROM SALARIOS";
+            dataGridView1.DataSource = Salarios.Selecionar(sql);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -69,6 +72,11 @@ namespace CalcIR
             string dependentes = nmrDependentes.Text;
             Calcular calculo = new Calcular(salarioBruto, descontos, dependentes);
             Salarios.Inserir(txtNome.Text, salarioBruto, descontos, dependentes, calculo.INSS[2], calculo.IRRF[2], calculo.SalarioLiquido);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

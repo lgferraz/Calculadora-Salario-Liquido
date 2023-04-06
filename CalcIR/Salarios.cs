@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,13 @@ namespace CalcIR
 {
     internal class Salarios
     {
+        public static DataTable Selecionar(string query)
+        {
+            SqlCommand cmd = new SqlCommand(query, Conexao.conn);
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            return dt;
+        }
         public static void Inserir(string nome, string salario_bruto, string desconto_outros, string qnt_dependentes, string inss, string irrf, string salario_liquido )
         {
             double sl_bruto = double.Parse(salario_bruto);
