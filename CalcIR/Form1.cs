@@ -32,7 +32,7 @@ namespace CalcIR
         {
             Conexao.Conectar();
             string sql = "SELECT * FROM SALARIOS";
-            dataGridView1.DataSource = Salarios.Selecionar(sql);
+            dataResultado.DataSource = Salarios.Selecionar(sql);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -71,11 +71,26 @@ namespace CalcIR
             string descontos = txtDescontos.Text;
             string dependentes = nmrDependentes.Text;
             Calcular calculo = new Calcular(salarioBruto, descontos, dependentes);
-            Salarios.Inserir(txtNome.Text, salarioBruto, descontos, dependentes, calculo.INSS[2], calculo.IRRF[2], calculo.SalarioLiquido);
+            Salarios.Inserir(txtFiltro.Text, salarioBruto, descontos, dependentes, calculo.INSS[2], calculo.IRRF[2], calculo.SalarioLiquido);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string valor = txtFiltro.Text;
+            string filtro = comboFiltro.Text;
+            string query = $"SELECT * FROM SALARIOS WHERE {filtro} = '{valor}'";
+            Conexao.Conectar();
+            dataResultado.DataSource = Salarios.Selecionar(query);
 
         }
     }

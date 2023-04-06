@@ -66,12 +66,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataResultado = new System.Windows.Forms.DataGridView();
+            this.comboFiltro = new System.Windows.Forms.ComboBox();
+            this.btnProcurar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nmrDependentes)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataResultado)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -485,7 +487,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(129, 408);
+            this.button1.Location = new System.Drawing.Point(129, 411);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 32);
@@ -497,7 +499,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(225, 408);
+            this.button2.Location = new System.Drawing.Point(225, 411);
             this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(92, 32);
@@ -506,14 +508,14 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // txtNome
+            // txtFiltro
             // 
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.txtNome.Location = new System.Drawing.Point(109, 60);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(287, 27);
-            this.txtNome.TabIndex = 13;
+            this.txtFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.txtFiltro.Location = new System.Drawing.Point(49, 465);
+            this.txtFiltro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.Size = new System.Drawing.Size(180, 27);
+            this.txtFiltro.TabIndex = 13;
             // 
             // label10
             // 
@@ -526,25 +528,57 @@
             this.label10.TabIndex = 12;
             this.label10.Text = "Nome:";
             // 
-            // dataGridView1
+            // dataResultado
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(50, 463);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(347, 122);
-            this.dataGridView1.TabIndex = 14;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataResultado.Location = new System.Drawing.Point(50, 498);
+            this.dataResultado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataResultado.Name = "dataResultado";
+            this.dataResultado.RowHeadersWidth = 51;
+            this.dataResultado.RowTemplate.Height = 24;
+            this.dataResultado.Size = new System.Drawing.Size(347, 122);
+            this.dataResultado.TabIndex = 14;
+            this.dataResultado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // comboFiltro
+            // 
+            this.comboFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8F);
+            this.comboFiltro.FormattingEnabled = true;
+            this.comboFiltro.Items.AddRange(new object[] {
+            "NOME",
+            "SALARIO_BRUTO",
+            "DESCONTO_OUTROS",
+            "QTD_DEPENDENTES",
+            "INSS",
+            "IRRF",
+            "SALARIO_LIQUIDO"});
+            this.comboFiltro.Location = new System.Drawing.Point(237, 464);
+            this.comboFiltro.Name = "comboFiltro";
+            this.comboFiltro.Size = new System.Drawing.Size(122, 28);
+            this.comboFiltro.TabIndex = 15;
+            this.comboFiltro.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // btnProcurar
+            // 
+            this.btnProcurar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcurar.Location = new System.Drawing.Point(367, 463);
+            this.btnProcurar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnProcurar.Name = "btnProcurar";
+            this.btnProcurar.Size = new System.Drawing.Size(30, 30);
+            this.btnProcurar.TabIndex = 16;
+            this.btnProcurar.Text = "🔍︎";
+            this.btnProcurar.UseVisualStyleBackColor = true;
+            this.btnProcurar.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(451, 609);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtNome);
+            this.ClientSize = new System.Drawing.Size(451, 655);
+            this.Controls.Add(this.btnProcurar);
+            this.Controls.Add(this.comboFiltro);
+            this.Controls.Add(this.dataResultado);
+            this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -565,7 +599,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nmrDependentes)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataResultado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -610,9 +644,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbSalarioLiquido;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtFiltro;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataResultado;
+        private System.Windows.Forms.ComboBox comboFiltro;
+        private System.Windows.Forms.Button btnProcurar;
     }
 }
 
