@@ -29,105 +29,110 @@
         private void InitializeComponent()
         {
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDe = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAte = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAliquota = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtADeduzir = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.nmrDependentes = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.btnInserir = new System.Windows.Forms.Button();
+            this.nmrcAno = new System.Windows.Forms.NumericUpDown();
+            this.nmrcFaixa = new System.Windows.Forms.NumericUpDown();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.nmrDependentes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tabControlEditor = new System.Windows.Forms.TabControl();
+            this.tabINSS = new System.Windows.Forms.TabPage();
+            this.tabIRRF = new System.Windows.Forms.TabPage();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrcAno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrcFaixa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabControlEditor.SuspendLayout();
+            this.tabINSS.SuspendLayout();
             this.SuspendLayout();
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.label10.Location = new System.Drawing.Point(69, 64);
+            this.label10.Location = new System.Drawing.Point(48, 65);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(71, 26);
             this.label10.TabIndex = 18;
             this.label10.Text = "Faixa:";
             // 
-            // textBox1
+            // txtDe
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.textBox1.Location = new System.Drawing.Point(148, 98);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 32);
-            this.textBox1.TabIndex = 21;
+            this.txtDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.txtDe.Location = new System.Drawing.Point(127, 99);
+            this.txtDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDe.Name = "txtDe";
+            this.txtDe.Size = new System.Drawing.Size(124, 32);
+            this.txtDe.TabIndex = 21;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.label1.Location = new System.Drawing.Point(94, 101);
+            this.label1.Location = new System.Drawing.Point(73, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 26);
             this.label1.TabIndex = 20;
             this.label1.Text = "De:";
             // 
-            // textBox2
+            // txtAte
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.textBox2.Location = new System.Drawing.Point(148, 134);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(124, 32);
-            this.textBox2.TabIndex = 23;
+            this.txtAte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.txtAte.Location = new System.Drawing.Point(127, 135);
+            this.txtAte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAte.Name = "txtAte";
+            this.txtAte.Size = new System.Drawing.Size(124, 32);
+            this.txtAte.TabIndex = 23;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.label2.Location = new System.Drawing.Point(89, 135);
+            this.label2.Location = new System.Drawing.Point(68, 136);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 26);
             this.label2.TabIndex = 22;
             this.label2.Text = "Ate:";
             // 
-            // textBox3
+            // txtAliquota
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.textBox3.Location = new System.Drawing.Point(148, 170);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(124, 32);
-            this.textBox3.TabIndex = 25;
+            this.txtAliquota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.txtAliquota.Location = new System.Drawing.Point(127, 171);
+            this.txtAliquota.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAliquota.Name = "txtAliquota";
+            this.txtAliquota.Size = new System.Drawing.Size(124, 32);
+            this.txtAliquota.TabIndex = 25;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.label3.Location = new System.Drawing.Point(43, 170);
+            this.label3.Location = new System.Drawing.Point(21, 172);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 26);
             this.label3.TabIndex = 24;
             this.label3.Text = "Aliquota:";
             // 
-            // textBox4
+            // txtADeduzir
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.textBox4.Location = new System.Drawing.Point(148, 206);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(124, 32);
-            this.textBox4.TabIndex = 27;
+            this.txtADeduzir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.txtADeduzir.Location = new System.Drawing.Point(127, 207);
+            this.txtADeduzir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtADeduzir.Name = "txtADeduzir";
+            this.txtADeduzir.Size = new System.Drawing.Size(124, 32);
+            this.txtADeduzir.TabIndex = 27;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.label4.Location = new System.Drawing.Point(26, 209);
+            this.label4.Location = new System.Drawing.Point(5, 210);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(114, 26);
             this.label4.TabIndex = 26;
@@ -137,95 +142,132 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.label5.Location = new System.Drawing.Point(83, 24);
+            this.label5.Location = new System.Drawing.Point(62, 25);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 26);
             this.label5.TabIndex = 28;
             this.label5.Text = "Ano:";
             // 
-            // button2
+            // btnInserir
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(479, 243);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 39);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Inserir";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserir.Location = new System.Drawing.Point(458, 244);
+            this.btnInserir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Size = new System.Drawing.Size(123, 39);
+            this.btnInserir.TabIndex = 30;
+            this.btnInserir.Text = "Inserir";
+            this.btnInserir.UseVisualStyleBackColor = true;
             // 
-            // nmrDependentes
+            // nmrcAno
             // 
-            this.nmrDependentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nmrDependentes.Location = new System.Drawing.Point(148, 20);
-            this.nmrDependentes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nmrDependentes.Name = "nmrDependentes";
-            this.nmrDependentes.Size = new System.Drawing.Size(124, 35);
-            this.nmrDependentes.TabIndex = 31;
+            this.nmrcAno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nmrcAno.Location = new System.Drawing.Point(127, 21);
+            this.nmrcAno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nmrcAno.Name = "nmrcAno";
+            this.nmrcAno.Size = new System.Drawing.Size(124, 35);
+            this.nmrcAno.TabIndex = 31;
             // 
-            // numericUpDown1
+            // nmrcFaixa
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(148, 59);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(124, 35);
-            this.numericUpDown1.TabIndex = 32;
+            this.nmrcFaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nmrcFaixa.Location = new System.Drawing.Point(127, 60);
+            this.nmrcFaixa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nmrcFaixa.Name = "nmrcFaixa";
+            this.nmrcFaixa.Size = new System.Drawing.Size(124, 35);
+            this.nmrcFaixa.TabIndex = 32;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(306, 20);
+            this.dataGridView1.Location = new System.Drawing.Point(285, 21);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(296, 218);
             this.dataGridView1.TabIndex = 33;
             // 
+            // tabControlEditor
+            // 
+            this.tabControlEditor.Controls.Add(this.tabINSS);
+            this.tabControlEditor.Controls.Add(this.tabIRRF);
+            this.tabControlEditor.Location = new System.Drawing.Point(1, 2);
+            this.tabControlEditor.Name = "tabControlEditor";
+            this.tabControlEditor.SelectedIndex = 0;
+            this.tabControlEditor.Size = new System.Drawing.Size(606, 320);
+            this.tabControlEditor.TabIndex = 34;
+            // 
+            // tabINSS
+            // 
+            this.tabINSS.Controls.Add(this.dataGridView1);
+            this.tabINSS.Controls.Add(this.label10);
+            this.tabINSS.Controls.Add(this.nmrcFaixa);
+            this.tabINSS.Controls.Add(this.label1);
+            this.tabINSS.Controls.Add(this.nmrcAno);
+            this.tabINSS.Controls.Add(this.txtDe);
+            this.tabINSS.Controls.Add(this.btnInserir);
+            this.tabINSS.Controls.Add(this.label2);
+            this.tabINSS.Controls.Add(this.label5);
+            this.tabINSS.Controls.Add(this.txtAte);
+            this.tabINSS.Controls.Add(this.txtADeduzir);
+            this.tabINSS.Controls.Add(this.label3);
+            this.tabINSS.Controls.Add(this.label4);
+            this.tabINSS.Controls.Add(this.txtAliquota);
+            this.tabINSS.Location = new System.Drawing.Point(4, 25);
+            this.tabINSS.Name = "tabINSS";
+            this.tabINSS.Padding = new System.Windows.Forms.Padding(3);
+            this.tabINSS.Size = new System.Drawing.Size(598, 291);
+            this.tabINSS.TabIndex = 0;
+            this.tabINSS.Text = "INSS";
+            this.tabINSS.UseVisualStyleBackColor = true;
+            // 
+            // tabIRRF
+            // 
+            this.tabIRRF.Location = new System.Drawing.Point(4, 25);
+            this.tabIRRF.Name = "tabIRRF";
+            this.tabIRRF.Padding = new System.Windows.Forms.Padding(3);
+            this.tabIRRF.Size = new System.Drawing.Size(598, 291);
+            this.tabIRRF.TabIndex = 1;
+            this.tabIRRF.Text = "IRFF";
+            this.tabIRRF.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 297);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.nmrDependentes);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label10);
+            this.ClientSize = new System.Drawing.Size(601, 317);
+            this.Controls.Add(this.tabControlEditor);
             this.HelpButton = true;
             this.Name = "Form2";
-            this.Text = "Tabela INSS";
-            ((System.ComponentModel.ISupportInitialize)(this.nmrDependentes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.Text = "Editor de Tabelas";
+            this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nmrcAno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrcFaixa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabControlEditor.ResumeLayout(false);
+            this.tabINSS.ResumeLayout(false);
+            this.tabINSS.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDe;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAte;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAliquota;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtADeduzir;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.NumericUpDown nmrDependentes;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button btnInserir;
+        private System.Windows.Forms.NumericUpDown nmrcAno;
+        private System.Windows.Forms.NumericUpDown nmrcFaixa;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TabControl tabControlEditor;
+        private System.Windows.Forms.TabPage tabINSS;
+        private System.Windows.Forms.TabPage tabIRRF;
     }
 }

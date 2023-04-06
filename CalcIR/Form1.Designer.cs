@@ -35,8 +35,9 @@
             this.txtDescontos = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.nmrDependentes = new System.Windows.Forms.NumericUpDown();
+            this.nmrcDependentes = new System.Windows.Forms.NumericUpDown();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEditarInss = new System.Windows.Forms.Button();
             this.lbSalarioLiquido = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.lbTotal2 = new System.Windows.Forms.Label();
@@ -72,8 +73,7 @@
             this.comboFiltro = new System.Windows.Forms.ComboBox();
             this.btnProcurar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.btnEditarInss = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.nmrDependentes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrcDependentes)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataResultado)).BeginInit();
             this.SuspendLayout();
@@ -140,14 +140,14 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Dependentes:";
             // 
-            // nmrDependentes
+            // nmrcDependentes
             // 
-            this.nmrDependentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nmrDependentes.Location = new System.Drawing.Point(377, 142);
-            this.nmrDependentes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nmrDependentes.Name = "nmrDependentes";
-            this.nmrDependentes.Size = new System.Drawing.Size(149, 35);
-            this.nmrDependentes.TabIndex = 7;
+            this.nmrcDependentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nmrcDependentes.Location = new System.Drawing.Point(377, 142);
+            this.nmrcDependentes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nmrcDependentes.Name = "nmrcDependentes";
+            this.nmrcDependentes.Size = new System.Drawing.Size(149, 35);
+            this.nmrcDependentes.TabIndex = 7;
             // 
             // panel1
             // 
@@ -185,6 +185,18 @@
             this.panel1.Size = new System.Drawing.Size(462, 260);
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnEditarInss
+            // 
+            this.btnEditarInss.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.btnEditarInss.Location = new System.Drawing.Point(427, 228);
+            this.btnEditarInss.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditarInss.Name = "btnEditarInss";
+            this.btnEditarInss.Size = new System.Drawing.Size(34, 31);
+            this.btnEditarInss.TabIndex = 18;
+            this.btnEditarInss.Text = "🖊️";
+            this.btnEditarInss.UseVisualStyleBackColor = true;
+            this.btnEditarInss.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // lbSalarioLiquido
             // 
@@ -524,7 +536,7 @@
             "IRRF",
             "SALARIO_LIQUIDO"});
             this.comboFiltro.Location = new System.Drawing.Point(316, 571);
-            this.comboFiltro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.comboFiltro.Name = "comboFiltro";
             this.comboFiltro.Size = new System.Drawing.Size(161, 33);
             this.comboFiltro.TabIndex = 15;
@@ -551,18 +563,6 @@
             this.txtNome.Size = new System.Drawing.Size(382, 32);
             this.txtNome.TabIndex = 17;
             // 
-            // btnEditarInss
-            // 
-            this.btnEditarInss.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.btnEditarInss.Location = new System.Drawing.Point(427, 228);
-            this.btnEditarInss.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEditarInss.Name = "btnEditarInss";
-            this.btnEditarInss.Size = new System.Drawing.Size(34, 31);
-            this.btnEditarInss.TabIndex = 18;
-            this.btnEditarInss.Text = "🖊️";
-            this.btnEditarInss.UseVisualStyleBackColor = true;
-            this.btnEditarInss.Click += new System.EventHandler(this.button3_Click_1);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -578,7 +578,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.nmrDependentes);
+            this.Controls.Add(this.nmrcDependentes);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtDescontos);
             this.Controls.Add(this.label3);
@@ -590,7 +590,7 @@
             this.Name = "Form1";
             this.Text = "Calculadora Salario Liquido";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.nmrDependentes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrcDependentes)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataResultado)).EndInit();
@@ -607,7 +607,7 @@
         private System.Windows.Forms.TextBox txtDescontos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown nmrDependentes;
+        private System.Windows.Forms.NumericUpDown nmrcDependentes;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label9;

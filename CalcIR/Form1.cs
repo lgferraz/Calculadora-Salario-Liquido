@@ -50,7 +50,7 @@ namespace CalcIR
             Label[][] tabela = new Label[][] {Salario, Outros, INSS, IRFF, Total};
             string salarioBruto = txtSalarioB.Text;
             string descontos = txtDescontos.Text;
-            string dependentes = nmrDependentes.Text;
+            string dependentes = nmrcDependentes.Text;
             Calcular calculo = new Calcular(salarioBruto, descontos, dependentes);
             string[][] dados = new string[][] { calculo.SalarioBruto, calculo.Outros, calculo.INSS, calculo.IRRF, calculo.Totais };
             for (int i = 0; i<tabela.Length; i++)
@@ -69,7 +69,7 @@ namespace CalcIR
             Conexao.Conectar();
             string salarioBruto = txtSalarioB.Text;
             string descontos = txtDescontos.Text;
-            string dependentes = nmrDependentes.Text;
+            string dependentes = nmrcDependentes.Text;
             Calcular calculo = new Calcular(salarioBruto, descontos, dependentes);
             Salarios.Inserir(txtNome.Text, salarioBruto, descontos, dependentes, calculo.INSS[2], calculo.IRRF[2], calculo.SalarioLiquido);
             string sql = "SELECT * FROM SALARIOS";
