@@ -71,7 +71,9 @@ namespace CalcIR
             string descontos = txtDescontos.Text;
             string dependentes = nmrDependentes.Text;
             Calcular calculo = new Calcular(salarioBruto, descontos, dependentes);
-            Salarios.Inserir(txtFiltro.Text, salarioBruto, descontos, dependentes, calculo.INSS[2], calculo.IRRF[2], calculo.SalarioLiquido);
+            Salarios.Inserir(txtNome.Text, salarioBruto, descontos, dependentes, calculo.INSS[2], calculo.IRRF[2], calculo.SalarioLiquido);
+            string sql = "SELECT * FROM SALARIOS";
+            dataResultado.DataSource = Salarios.Selecionar(sql);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -88,10 +90,16 @@ namespace CalcIR
         {
             string valor = txtFiltro.Text;
             string filtro = comboFiltro.Text;
-            string query = $"SELECT * FROM SALARIOS WHERE {filtro} = '{valor}'";
+            string query = $"SELECT * FROM SALARIOS WHERE {filtro} = '%{valor}%'";
             Conexao.Conectar();
             dataResultado.DataSource = Salarios.Selecionar(query);
 
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
         }
     }
 }

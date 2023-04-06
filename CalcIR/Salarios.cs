@@ -25,7 +25,6 @@ namespace CalcIR
             int dependentes = int.Parse(qnt_dependentes);
             double inss_ = double.Parse(inss);
             double irrf_ = double.Parse(irrf);
-            MessageBox.Show(salario_liquido);
             double sl_liquido = double.Parse(salario_liquido);
             string sql = "INSERT INTO SALARIOS (NOME, SALARIO_BRUTO, DESCONTO_OUTROS, QTD_DEPENDENTES, INSS, IRRF, SALARIO_LIQUIDO) VALUES (@nome, @sl_bruto, @desconto, @dependentes, @inss, @sl_liquido, @irff)";
 
