@@ -19,7 +19,26 @@ namespace CalcIR
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            string sql = "SELECT * FROM INSS";
+            dataINSS.DataSource = Salarios.Selecionar(sql);
+        }
 
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+            Conexao.Conectar();
+            string ano = nmrcAno.Text;
+            string faixa = nmrcFaixa.Text;
+            string de = txtDe.Text;
+            string ate = txtAte.Text;
+            string aliquota = txtAliquota.Text;
+            string a_deduzir = txtADeduzir.Text;
+            INSS.Inserir(faixa, de, ate, aliquota, a_deduzir, ano);
+            string sql = "SELECT * FROM INSS";
+            dataINSS.DataSource = Salarios.Selecionar(sql);
+        }
+
+        private void tabINSS_Click(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -41,13 +41,13 @@
             this.btnInserir = new System.Windows.Forms.Button();
             this.nmrcAno = new System.Windows.Forms.NumericUpDown();
             this.nmrcFaixa = new System.Windows.Forms.NumericUpDown();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataINSS = new System.Windows.Forms.DataGridView();
             this.tabControlEditor = new System.Windows.Forms.TabControl();
             this.tabINSS = new System.Windows.Forms.TabPage();
             this.tabIRRF = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcAno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcFaixa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataINSS)).BeginInit();
             this.tabControlEditor.SuspendLayout();
             this.tabINSS.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +56,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.label10.Location = new System.Drawing.Point(48, 65);
+            this.label10.Location = new System.Drawing.Point(46, 65);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(71, 26);
             this.label10.TabIndex = 18;
@@ -75,7 +75,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.label1.Location = new System.Drawing.Point(73, 102);
+            this.label1.Location = new System.Drawing.Point(71, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 26);
             this.label1.TabIndex = 20;
@@ -94,7 +94,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.label2.Location = new System.Drawing.Point(68, 136);
+            this.label2.Location = new System.Drawing.Point(66, 136);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 26);
             this.label2.TabIndex = 22;
@@ -113,7 +113,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.label3.Location = new System.Drawing.Point(21, 172);
+            this.label3.Location = new System.Drawing.Point(19, 172);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 26);
             this.label3.TabIndex = 24;
@@ -132,7 +132,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.label4.Location = new System.Drawing.Point(5, 210);
+            this.label4.Location = new System.Drawing.Point(3, 210);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(114, 26);
             this.label4.TabIndex = 26;
@@ -142,7 +142,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.label5.Location = new System.Drawing.Point(62, 25);
+            this.label5.Location = new System.Drawing.Point(60, 25);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 26);
             this.label5.TabIndex = 28;
@@ -158,6 +158,7 @@
             this.btnInserir.TabIndex = 30;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // nmrcAno
             // 
@@ -177,15 +178,15 @@
             this.nmrcFaixa.Size = new System.Drawing.Size(124, 35);
             this.nmrcFaixa.TabIndex = 32;
             // 
-            // dataGridView1
+            // dataINSS
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(285, 21);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(296, 218);
-            this.dataGridView1.TabIndex = 33;
+            this.dataINSS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataINSS.Location = new System.Drawing.Point(285, 21);
+            this.dataINSS.Name = "dataINSS";
+            this.dataINSS.RowHeadersWidth = 51;
+            this.dataINSS.RowTemplate.Height = 24;
+            this.dataINSS.Size = new System.Drawing.Size(296, 218);
+            this.dataINSS.TabIndex = 33;
             // 
             // tabControlEditor
             // 
@@ -199,7 +200,7 @@
             // 
             // tabINSS
             // 
-            this.tabINSS.Controls.Add(this.dataGridView1);
+            this.tabINSS.Controls.Add(this.dataINSS);
             this.tabINSS.Controls.Add(this.label10);
             this.tabINSS.Controls.Add(this.nmrcFaixa);
             this.tabINSS.Controls.Add(this.label1);
@@ -220,6 +221,7 @@
             this.tabINSS.TabIndex = 0;
             this.tabINSS.Text = "INSS";
             this.tabINSS.UseVisualStyleBackColor = true;
+            this.tabINSS.Click += new System.EventHandler(this.tabINSS_Click);
             // 
             // tabIRRF
             // 
@@ -235,7 +237,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 317);
+            this.ClientSize = new System.Drawing.Size(598, 314);
             this.Controls.Add(this.tabControlEditor);
             this.HelpButton = true;
             this.Name = "Form2";
@@ -243,7 +245,7 @@
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmrcAno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcFaixa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataINSS)).EndInit();
             this.tabControlEditor.ResumeLayout(false);
             this.tabINSS.ResumeLayout(false);
             this.tabINSS.PerformLayout();
@@ -265,7 +267,7 @@
         private System.Windows.Forms.Button btnInserir;
         private System.Windows.Forms.NumericUpDown nmrcAno;
         private System.Windows.Forms.NumericUpDown nmrcFaixa;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataINSS;
         private System.Windows.Forms.TabControl tabControlEditor;
         private System.Windows.Forms.TabPage tabINSS;
         private System.Windows.Forms.TabPage tabIRRF;
