@@ -44,7 +44,9 @@
             this.dataINSS = new System.Windows.Forms.DataGridView();
             this.tabControlEditor = new System.Windows.Forms.TabControl();
             this.tabINSS = new System.Windows.Forms.TabPage();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.tabIRRF = new System.Windows.Forms.TabPage();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcAno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcFaixa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataINSS)).BeginInit();
@@ -151,7 +153,7 @@
             // btnInserir
             // 
             this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInserir.Location = new System.Drawing.Point(458, 244);
+            this.btnInserir.Location = new System.Drawing.Point(532, 246);
             this.btnInserir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(123, 39);
@@ -181,12 +183,13 @@
             // dataINSS
             // 
             this.dataINSS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataINSS.Location = new System.Drawing.Point(285, 21);
+            this.dataINSS.Location = new System.Drawing.Point(274, 21);
             this.dataINSS.Name = "dataINSS";
             this.dataINSS.RowHeadersWidth = 51;
             this.dataINSS.RowTemplate.Height = 24;
-            this.dataINSS.Size = new System.Drawing.Size(296, 218);
+            this.dataINSS.Size = new System.Drawing.Size(381, 218);
             this.dataINSS.TabIndex = 33;
+            this.dataINSS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataINSS_CellClick);
             // 
             // tabControlEditor
             // 
@@ -195,11 +198,13 @@
             this.tabControlEditor.Location = new System.Drawing.Point(1, 2);
             this.tabControlEditor.Name = "tabControlEditor";
             this.tabControlEditor.SelectedIndex = 0;
-            this.tabControlEditor.Size = new System.Drawing.Size(606, 320);
+            this.tabControlEditor.Size = new System.Drawing.Size(675, 327);
             this.tabControlEditor.TabIndex = 34;
             // 
             // tabINSS
             // 
+            this.tabINSS.Controls.Add(this.btnExcluir);
+            this.tabINSS.Controls.Add(this.btnAtualizar);
             this.tabINSS.Controls.Add(this.dataINSS);
             this.tabINSS.Controls.Add(this.label10);
             this.tabINSS.Controls.Add(this.nmrcFaixa);
@@ -217,11 +222,23 @@
             this.tabINSS.Location = new System.Drawing.Point(4, 25);
             this.tabINSS.Name = "tabINSS";
             this.tabINSS.Padding = new System.Windows.Forms.Padding(3);
-            this.tabINSS.Size = new System.Drawing.Size(598, 291);
+            this.tabINSS.Size = new System.Drawing.Size(667, 298);
             this.tabINSS.TabIndex = 0;
             this.tabINSS.Text = "INSS";
             this.tabINSS.UseVisualStyleBackColor = true;
             this.tabINSS.Click += new System.EventHandler(this.tabINSS_Click);
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(403, 246);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(123, 39);
+            this.btnAtualizar.TabIndex = 34;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // tabIRRF
             // 
@@ -233,11 +250,23 @@
             this.tabIRRF.Text = "IRFF";
             this.tabIRRF.UseVisualStyleBackColor = true;
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Location = new System.Drawing.Point(274, 246);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(123, 39);
+            this.btnExcluir.TabIndex = 35;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 314);
+            this.ClientSize = new System.Drawing.Size(672, 323);
             this.Controls.Add(this.tabControlEditor);
             this.HelpButton = true;
             this.Name = "Form2";
@@ -271,5 +300,7 @@
         private System.Windows.Forms.TabControl tabControlEditor;
         private System.Windows.Forms.TabPage tabINSS;
         private System.Windows.Forms.TabPage tabIRRF;
+        private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

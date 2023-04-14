@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -24,27 +25,43 @@ namespace CalcIR
         }
         private void inss()
         {
+            Conexao.Conectar();
+            string sql = "SELECT * FROM INSS";
+            DataTable dt = ClassINSS.Selecionar(sql);
+            double ate_01 = double.Parse(dt.Rows[0]["ATE"].ToString());
+            double de_01 = double.Parse(dt.Rows[0]["DE"].ToString());
+            double aliquota_01 = double.Parse(dt.Rows[0]["ALIQUOTA"].ToString());
+            double ate_02 = double.Parse(dt.Rows[1]["ATE"].ToString());
+            double de_02 = double.Parse(dt.Rows[1]["DE"].ToString());
+            double aliquota_02 = double.Parse(dt.Rows[1]["ALIQUOTA"].ToString());
+            double ate_03 = double.Parse(dt.Rows[2]["ATE"].ToString());
+            double de_03 = double.Parse(dt.Rows[2]["DE"].ToString());
+            double aliquota_03 = double.Parse(dt.Rows[2]["ALIQUOTA"].ToString());
+            double ate_04 = double.Parse(dt.Rows[3]["ATE"].ToString());
+            double de_04 = double.Parse(dt.Rows[3]["DE"].ToString());
+            double aliquota_04 = double.Parse(dt.Rows[3]["ALIQUOTA"].ToString());
+
             double slBruto = double.Parse(this.SalarioBruto[1]);
             double vlInss = 0;
-            if (slBruto <= 1302.00)
+            if (slBruto <= ate_01)
             {
-                vlInss = (slBruto * 7.5 / 100);
+                vlInss = (slBruto * aliquota_01 / 100);
             }
-            else if (slBruto <= 2571.29)
+            else if (slBruto <= ate_02)
             {
-                vlInss = ((slBruto - 1302.00) * 9 / 100) + (1302.00 * 7.5 / 100);
+                vlInss = ((slBruto - ate_02) * aliquota_02 / 100) + (ate_01 * aliquota_01 / 100);
             }
-            else if (slBruto <= 3856.94)
+            else if (slBruto <= ate_03)
             {
-                vlInss = ((slBruto - 2571.29) * 12 / 100) + ((2571.29 - 1302.00) * 9 / 100) + (1302.00 * 7.5 / 100);
+                vlInss = ((slBruto - ate_03) * aliquota_03 / 100) + ((ate_02 - ate_01) * aliquota_02 / 100) + (ate_01 * aliquota_01 / 100);
             }
-            else if (slBruto <= 7507.49)
+            else if (slBruto <= ate_04)
             {
-                vlInss = ((slBruto - 3856.94) * 14 / 100) + ((3856.94 - 2571.29) * 12 / 100) + ((2571.29 - 1302.00) * 9 / 100) + (1302.00 * 7.5 / 100);
+                vlInss = ((slBruto - ate_04) * aliquota_04 / 100) + ((ate_03 - ate_02) * aliquota_03 / 100) + ((ate_02 - ate_01) * aliquota_02 / 100) + (ate_01 * aliquota_01 / 100);
             }
             else
             {
-                vlInss = ((7507.49 - 3856.94) * 14 / 100) + ((3856.94 - 2571.29) * 12 / 100) + ((2571.29 - 1302.00) * 9 / 100) + (1302.00 * 7.5 / 100);
+                vlInss = ((ate_04 - ate_03) * aliquota_04 / 100) + ((ate_03 - ate_02) * aliquota_03 / 100) + ((ate_02 - ate_01) * aliquota_02 / 100) + (ate_01 * aliquota_01 / 100);
             }
 
             double salarioL = slBruto - vlInss;
