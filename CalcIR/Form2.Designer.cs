@@ -44,9 +44,10 @@
             this.dataINSS = new System.Windows.Forms.DataGridView();
             this.tabControlEditor = new System.Windows.Forms.TabControl();
             this.tabINSS = new System.Windows.Forms.TabPage();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.tabIRRF = new System.Windows.Forms.TabPage();
-            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcAno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcFaixa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataINSS)).BeginInit();
@@ -203,6 +204,7 @@
             // 
             // tabINSS
             // 
+            this.tabINSS.Controls.Add(this.btnLimpar);
             this.tabINSS.Controls.Add(this.btnExcluir);
             this.tabINSS.Controls.Add(this.btnAtualizar);
             this.tabINSS.Controls.Add(this.dataINSS);
@@ -228,6 +230,18 @@
             this.tabINSS.UseVisualStyleBackColor = true;
             this.tabINSS.Click += new System.EventHandler(this.tabINSS_Click);
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Location = new System.Drawing.Point(274, 246);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(123, 39);
+            this.btnExcluir.TabIndex = 35;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // btnAtualizar
             // 
             this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -245,22 +259,22 @@
             this.tabIRRF.Location = new System.Drawing.Point(4, 25);
             this.tabIRRF.Name = "tabIRRF";
             this.tabIRRF.Padding = new System.Windows.Forms.Padding(3);
-            this.tabIRRF.Size = new System.Drawing.Size(598, 291);
+            this.tabIRRF.Size = new System.Drawing.Size(667, 298);
             this.tabIRRF.TabIndex = 1;
             this.tabIRRF.Text = "IRFF";
             this.tabIRRF.UseVisualStyleBackColor = true;
             // 
-            // btnExcluir
+            // btnLimpar
             // 
-            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(274, 246);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(123, 39);
-            this.btnExcluir.TabIndex = 35;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Location = new System.Drawing.Point(217, 243);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(34, 31);
+            this.btnLimpar.TabIndex = 36;
+            this.btnLimpar.Text = "🧹";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // Form2
             // 
@@ -302,5 +316,6 @@
         private System.Windows.Forms.TabPage tabIRRF;
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }

@@ -20,6 +20,15 @@ namespace CalcIR
             dataINSS.DataSource = Salarios.Selecionar(sql);
         }
 
+        public void Limpar()
+        {
+            nmrcAno.Text = "0";
+            nmrcFaixa.Text = "0";
+            txtADeduzir.Text = "0";
+            txtAliquota.Text = "0";
+            txtAte.Text = "0";
+            txtDe.Text = "0";
+        }
         public Form2()
         {
             InitializeComponent();
@@ -78,6 +87,11 @@ namespace CalcIR
             string id = dataINSS.CurrentRow.Cells[0].Value.ToString();
             ClassINSS.Excluir(id);
             inssGrid();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            Limpar();
         }
     }
 }
