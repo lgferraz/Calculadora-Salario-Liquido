@@ -12,15 +12,16 @@ namespace CalcIR
             dt.Load(cmd.ExecuteReader());
             return dt;
         }
-        public static void Inserir(string nome, string salario_bruto, string desconto_outros, string qnt_dependentes, string inss, string irrf, string salario_liquido )
+        public static void Inserir(string nome, string salario_bruto, string desconto_outros, string qnt_dependentes, string inss, string ano_inss, string irrf, string salario_liquido )
         {
             double sl_bruto = double.Parse(salario_bruto);
             double desconto = double.Parse(desconto_outros);
             int dependentes = int.Parse(qnt_dependentes);
             double inss_ = double.Parse(inss);
+            int ano_inss_ = int.Parse(ano_inss);
             double irrf_ = double.Parse(irrf);
             double sl_liquido = double.Parse(salario_liquido);
-            string sql = "INSERT INTO SALARIOS (NOME, SALARIO_BRUTO, DESCONTO_OUTROS, QTD_DEPENDENTES, INSS, IRRF, SALARIO_LIQUIDO) VALUES (@nome, @sl_bruto, @desconto, @dependentes, @inss, @sl_liquido, @irff)";
+            string sql = "INSERT INTO SALARIOS (NOME, SALARIO_BRUTO, DESCONTO_OUTROS, QTD_DEPENDENTES, INSS, ANO_INSS, IRRF, SALARIO_LIQUIDO) VALUES (@nome, @sl_bruto, @desconto, @dependentes, @inss, @ano_inss, @irff, @sl_liquido)";
 
             SqlCommand cmd = new SqlCommand(sql, Conexao.conn);
             cmd.Parameters.AddWithValue("nome", nome);
@@ -28,6 +29,7 @@ namespace CalcIR
             cmd.Parameters.AddWithValue("desconto", desconto);
             cmd.Parameters.AddWithValue("dependentes", dependentes);
             cmd.Parameters.AddWithValue("inss", inss_);
+            cmd.Parameters.AddWithValue("ano_inss", ano_inss_);
             cmd.Parameters.AddWithValue("irff", irrf_);
             cmd.Parameters.AddWithValue("sl_liquido", sl_liquido);
             cmd.ExecuteNonQuery();

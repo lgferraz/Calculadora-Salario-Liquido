@@ -523,6 +523,7 @@
             this.dataResultado.RowTemplate.Height = 24;
             this.dataResultado.Size = new System.Drawing.Size(463, 150);
             this.dataResultado.TabIndex = 14;
+            this.dataResultado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataResultado_CellClick);
             this.dataResultado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // comboFiltro
@@ -609,8 +610,10 @@
             this.Controls.Add(this.txtSalarioB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Calculadora Salario Liquido";
             this.Load += new System.EventHandler(this.Form1_Load);

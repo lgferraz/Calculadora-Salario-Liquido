@@ -73,7 +73,7 @@ namespace CalcIR
             string descontos = txtDescontos.Text;
             string dependentes = nmrcDependentes.Text;
             Calcular calculo = new Calcular(ano, salarioBruto, descontos, dependentes);
-            Salarios.Inserir(txtNome.Text, salarioBruto, descontos, dependentes, calculo.INSS[2], calculo.IRRF[2], calculo.SalarioLiquido);
+            Salarios.Inserir(txtNome.Text, salarioBruto, descontos, dependentes, calculo.INSS[2], calculo.Ano, calculo.IRRF[2], calculo.SalarioLiquido);
             string sql = "SELECT * FROM SALARIOS";
             dataResultado.DataSource = Salarios.Selecionar(sql);
         }
@@ -107,6 +107,15 @@ namespace CalcIR
         private void label11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataResultado_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtNome.Text = dataResultado.CurrentRow.Cells[1].Value.ToString();
+            txtAno.Text = dataResultado.CurrentRow.Cells[6].Value.ToString();
+            txtSalarioB.Text = dataResultado.CurrentRow.Cells[2].Value.ToString();
+            txtDescontos.Text = dataResultado.CurrentRow.Cells[3].Value.ToString();
+            nmrcDependentes.Text = dataResultado.CurrentRow.Cells[4].Value.ToString();
         }
     }
 }
