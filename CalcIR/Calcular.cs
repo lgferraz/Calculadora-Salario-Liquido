@@ -12,10 +12,11 @@ namespace CalcIR
     internal class Calcular
     {
         public string[] SalarioBruto, Outros, INSS, IRRF, Totais;
-        public string SalarioLiquido;
+        public string Ano, SalarioLiquido;
 
-        public Calcular(string salarioBruto, string descontos, string dependentes)
+        public Calcular(string ano, string salarioBruto, string descontos, string dependentes)
         {
+            this.Ano = ano;
             this.SalarioBruto = new string[] {"00", salarioBruto, "00" };
             this.Outros = new string[] { "00", "00", descontos };
             this.INSS = new string[] {"00", "00", "00" };
@@ -26,7 +27,7 @@ namespace CalcIR
         private void inss()
         {
             Conexao.Conectar();
-            string sql = "SELECT * FROM INSS";
+            string sql = $"SELECT * FROM INSS WHERE ANO = {this.Ano}";
             DataTable dt = ClassINSS.Selecionar(sql);
             double ate_01 = double.Parse(dt.Rows[0]["ATE"].ToString());
             double de_01 = double.Parse(dt.Rows[0]["DE"].ToString());

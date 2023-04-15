@@ -73,6 +73,8 @@
             this.comboFiltro = new System.Windows.Forms.ComboBox();
             this.btnProcurar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtAno = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcDependentes)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataResultado)).BeginInit();
@@ -560,14 +562,36 @@
             this.txtNome.Location = new System.Drawing.Point(144, 75);
             this.txtNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(382, 32);
+            this.txtNome.Size = new System.Drawing.Size(228, 32);
             this.txtNome.TabIndex = 17;
+            // 
+            // txtAno
+            // 
+            this.txtAno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.txtAno.Location = new System.Drawing.Point(444, 75);
+            this.txtAno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAno.Name = "txtAno";
+            this.txtAno.Size = new System.Drawing.Size(82, 32);
+            this.txtAno.TabIndex = 19;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.label11.Location = new System.Drawing.Point(381, 78);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 26);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Ano:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 806);
+            this.Controls.Add(this.txtAno);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnProcurar);
             this.Controls.Add(this.comboFiltro);
@@ -645,6 +669,8 @@
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Button btnEditarInss;
+        private System.Windows.Forms.TextBox txtAno;
+        private System.Windows.Forms.Label label11;
     }
 }
 

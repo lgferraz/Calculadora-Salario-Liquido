@@ -48,10 +48,11 @@ namespace CalcIR
             Label[] IRFF = new Label[] { lbIRFF0, lbIRFF1, lbIRFF2 };
             Label[] Total = new Label[] { lbTotal0, lbTotal1, lbTotal2 };
             Label[][] tabela = new Label[][] {Salario, Outros, INSS, IRFF, Total};
+            string ano = txtAno.Text;
             string salarioBruto = txtSalarioB.Text;
             string descontos = txtDescontos.Text;
             string dependentes = nmrcDependentes.Text;
-            Calcular calculo = new Calcular(salarioBruto, descontos, dependentes);
+            Calcular calculo = new Calcular(ano, salarioBruto, descontos, dependentes);
             string[][] dados = new string[][] { calculo.SalarioBruto, calculo.Outros, calculo.INSS, calculo.IRRF, calculo.Totais };
             for (int i = 0; i<tabela.Length; i++)
             {
@@ -67,10 +68,11 @@ namespace CalcIR
         private void button2_Click(object sender, EventArgs e)
         {
             Conexao.Conectar();
+            string ano = txtAno.Text;
             string salarioBruto = txtSalarioB.Text;
             string descontos = txtDescontos.Text;
             string dependentes = nmrcDependentes.Text;
-            Calcular calculo = new Calcular(salarioBruto, descontos, dependentes);
+            Calcular calculo = new Calcular(ano, salarioBruto, descontos, dependentes);
             Salarios.Inserir(txtNome.Text, salarioBruto, descontos, dependentes, calculo.INSS[2], calculo.IRRF[2], calculo.SalarioLiquido);
             string sql = "SELECT * FROM SALARIOS";
             dataResultado.DataSource = Salarios.Selecionar(sql);
@@ -100,6 +102,11 @@ namespace CalcIR
         {
             Form2 form2 = new Form2();
             form2.Show();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
