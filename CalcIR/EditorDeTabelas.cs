@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CalcIR
 {
-    public partial class Form2 : Form
+    public partial class EditorDeTabelas : Form
     {
 
         public void inssGrid()
@@ -29,7 +29,7 @@ namespace CalcIR
             txtAte.Text = "0";
             txtDe.Text = "0";
         }
-        public Form2()
+        public EditorDeTabelas()
         {
             InitializeComponent();
         }
@@ -38,6 +38,8 @@ namespace CalcIR
         {
             string sql = "SELECT * FROM INSS";
             dataINSS.DataSource = Salarios.Selecionar(sql);
+            dataINSS.DefaultCellStyle.ForeColor = Color.White;
+            dataINSS.DefaultCellStyle.BackColor = Color.DarkViolet;
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
@@ -51,10 +53,6 @@ namespace CalcIR
             string a_deduzir = txtADeduzir.Text;
             ClassINSS.Inserir(faixa, de, ate, aliquota, a_deduzir, ano);
             inssGrid();
-        }
-
-        private void tabINSS_Click(object sender, EventArgs e)
-        {
         }
 
         private void dataINSS_CellClick(object sender, DataGridViewCellEventArgs e)

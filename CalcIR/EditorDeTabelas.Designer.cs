@@ -1,6 +1,6 @@
 ﻿namespace CalcIR
 {
-    partial class Form2
+    partial class EditorDeTabelas
     {
         /// <summary>
         /// Required designer variable.
@@ -44,10 +44,10 @@
             this.dataINSS = new System.Windows.Forms.DataGridView();
             this.tabControlEditor = new System.Windows.Forms.TabControl();
             this.tabINSS = new System.Windows.Forms.TabPage();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.tabIRRF = new System.Windows.Forms.TabPage();
-            this.btnLimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcAno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcFaixa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataINSS)).BeginInit();
@@ -153,14 +153,18 @@
             // 
             // btnInserir
             // 
+            this.btnInserir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInserir.BackColor = System.Drawing.Color.DarkViolet;
+            this.btnInserir.FlatAppearance.BorderSize = 0;
+            this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInserir.Location = new System.Drawing.Point(532, 246);
+            this.btnInserir.Location = new System.Drawing.Point(703, 381);
             this.btnInserir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(123, 39);
             this.btnInserir.TabIndex = 30;
             this.btnInserir.Text = "Inserir";
-            this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.UseVisualStyleBackColor = false;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // nmrcAno
@@ -183,12 +187,17 @@
             // 
             // dataINSS
             // 
+            this.dataINSS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataINSS.BackgroundColor = System.Drawing.Color.DarkViolet;
+            this.dataINSS.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataINSS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataINSS.Location = new System.Drawing.Point(274, 21);
             this.dataINSS.Name = "dataINSS";
             this.dataINSS.RowHeadersWidth = 51;
             this.dataINSS.RowTemplate.Height = 24;
-            this.dataINSS.Size = new System.Drawing.Size(381, 218);
+            this.dataINSS.Size = new System.Drawing.Size(552, 353);
             this.dataINSS.TabIndex = 33;
             this.dataINSS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataINSS_CellClick);
             // 
@@ -196,14 +205,16 @@
             // 
             this.tabControlEditor.Controls.Add(this.tabINSS);
             this.tabControlEditor.Controls.Add(this.tabIRRF);
-            this.tabControlEditor.Location = new System.Drawing.Point(1, 2);
+            this.tabControlEditor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlEditor.Location = new System.Drawing.Point(0, 0);
             this.tabControlEditor.Name = "tabControlEditor";
             this.tabControlEditor.SelectedIndex = 0;
-            this.tabControlEditor.Size = new System.Drawing.Size(675, 327);
+            this.tabControlEditor.Size = new System.Drawing.Size(843, 458);
             this.tabControlEditor.TabIndex = 34;
             // 
             // tabINSS
             // 
+            this.tabINSS.BackColor = System.Drawing.Color.DarkViolet;
             this.tabINSS.Controls.Add(this.btnLimpar);
             this.tabINSS.Controls.Add(this.btnExcluir);
             this.tabINSS.Controls.Add(this.btnAtualizar);
@@ -224,34 +235,55 @@
             this.tabINSS.Location = new System.Drawing.Point(4, 25);
             this.tabINSS.Name = "tabINSS";
             this.tabINSS.Padding = new System.Windows.Forms.Padding(3);
-            this.tabINSS.Size = new System.Drawing.Size(667, 298);
+            this.tabINSS.Size = new System.Drawing.Size(835, 429);
             this.tabINSS.TabIndex = 0;
             this.tabINSS.Text = "INSS";
-            this.tabINSS.UseVisualStyleBackColor = true;
-            this.tabINSS.Click += new System.EventHandler(this.tabINSS_Click);
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.Color.DarkViolet;
+            this.btnLimpar.FlatAppearance.BorderSize = 0;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Location = new System.Drawing.Point(217, 243);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(34, 31);
+            this.btnLimpar.TabIndex = 36;
+            this.btnLimpar.Text = "🧹";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnExcluir
             // 
+            this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcluir.BackColor = System.Drawing.Color.DarkViolet;
+            this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(274, 246);
+            this.btnExcluir.Location = new System.Drawing.Point(445, 381);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(123, 39);
             this.btnExcluir.TabIndex = 35;
             this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAtualizar
             // 
+            this.btnAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAtualizar.BackColor = System.Drawing.Color.DarkViolet;
+            this.btnAtualizar.FlatAppearance.BorderSize = 0;
+            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(403, 246);
+            this.btnAtualizar.Location = new System.Drawing.Point(574, 381);
             this.btnAtualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(123, 39);
             this.btnAtualizar.TabIndex = 34;
             this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.UseVisualStyleBackColor = false;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // tabIRRF
@@ -264,27 +296,17 @@
             this.tabIRRF.Text = "IRFF";
             this.tabIRRF.UseVisualStyleBackColor = true;
             // 
-            // btnLimpar
-            // 
-            this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(217, 243);
-            this.btnLimpar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(34, 31);
-            this.btnLimpar.TabIndex = 36;
-            this.btnLimpar.Text = "🧹";
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
-            // 
-            // Form2
+            // EditorDeTabelas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 323);
+            this.BackColor = System.Drawing.Color.DarkViolet;
+            this.ClientSize = new System.Drawing.Size(843, 458);
             this.Controls.Add(this.tabControlEditor);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.HelpButton = true;
-            this.Name = "Form2";
+            this.Name = "EditorDeTabelas";
             this.Text = "Editor de Tabelas";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmrcAno)).EndInit();

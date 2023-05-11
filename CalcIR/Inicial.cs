@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace CalcIR
 {
-    public partial class Form1 : Form
+    public partial class Inicial : Form
     {
-        public Form1()
+        public Inicial()
         {
             InitializeComponent();
         }
@@ -33,6 +33,8 @@ namespace CalcIR
             Conexao.Conectar();
             string sql = "SELECT * FROM SALARIOS";
             dataResultado.DataSource = Salarios.Selecionar(sql);
+            dataResultado.DefaultCellStyle.ForeColor = Color.White;
+            dataResultado.DefaultCellStyle.BackColor = Color.DarkViolet;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -100,7 +102,7 @@ namespace CalcIR
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            EditorDeTabelas form2 = new EditorDeTabelas();
             form2.Show();
         }
 

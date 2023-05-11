@@ -12,7 +12,7 @@ namespace CalcIR
     internal class Calcular
     {
         public string[] SalarioBruto, Outros, INSS, IRRF, Totais;
-        public string Ano, SalarioLiquido;
+        public string Ano, SalarioLiquido;  
 
         public Calcular(string ano, string salarioBruto, string descontos, string dependentes)
         {
